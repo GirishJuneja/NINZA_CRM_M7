@@ -450,6 +450,7 @@ public class CreateCampaignTest extends BaseClass {
 				//	System.out.println("Campaign not created");
 				
 				Assert.assertTrue(toastMsg.getText().contains(campaignname));
+				System.out.println("Status added");
 				
 				hp.getCloseToastMsg().click();
 				
