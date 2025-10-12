@@ -142,6 +142,7 @@ public class CreateCampaignTest extends BaseClass {
 				
 				Assert.assertTrue(toastMsg.getText().contains(campaignname));
 				//Assert.assertTrue(toastMsg.getText().contains("z"));
+				System.out.println("New statement");
 				
 				hp.getCloseToastMsg().click();
 				
