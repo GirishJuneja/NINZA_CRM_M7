@@ -142,7 +142,11 @@ public class CreateCampaignTest extends BaseClass {
 				
 				Assert.assertTrue(toastMsg.getText().contains(campaignname));
 				//Assert.assertTrue(toastMsg.getText().contains("z"));
+
 				System.out.println("New statement");
+
+				System.out.println("From new workspace");
+
 				
 				hp.getCloseToastMsg().click();
 				
@@ -450,6 +454,7 @@ public class CreateCampaignTest extends BaseClass {
 				//	System.out.println("Campaign not created");
 				
 				Assert.assertTrue(toastMsg.getText().contains(campaignname));
+				System.out.println("Status added");
 				
 				hp.getCloseToastMsg().click();
 				
