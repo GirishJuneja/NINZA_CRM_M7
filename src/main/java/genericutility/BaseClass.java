@@ -63,8 +63,8 @@ public class BaseClass {
   //public void beforeClass(String BROWSER) throws IOException {
   public void beforeClass() throws IOException {
 	  System.out.println("Launch the browser");
-	  //String BROWSER = pLib.readDataFromPropertyFile("Browser");
-	  String BROWSER =System.getProperty("Browser");
+	  String BROWSER = pLib.readDataFromPropertyFile("Browser");
+	//  String BROWSER =System.getProperty("Browser");
 	  ChromeOptions settings =new ChromeOptions();
 		Map<String,Object> prefs= new HashMap<>();
 		prefs.put("profile.password_manager_leak_detection", false);
@@ -99,12 +99,12 @@ public class BaseClass {
 	  System.out.println("Log in");
 	  
   
-	  //String URL = pLib.readDataFromPropertyFile("URL");
-	  //String USERNAME = pLib.readDataFromPropertyFile("Username");
-	  //String PASSWORD = pLib.readDataFromPropertyFile("Password");
-	  String URL = System.getProperty("URL");
-	  String USERNAME = System.getProperty("Username");
-	  String PASSWORD = System.getProperty("Password");
+	  String URL = pLib.readDataFromPropertyFile("URL");
+	  String USERNAME = pLib.readDataFromPropertyFile("Username");
+	  String PASSWORD = pLib.readDataFromPropertyFile("Password");
+	  //String URL = System.getProperty("URL");
+	 // String USERNAME = System.getProperty("Username");
+	  //String PASSWORD = System.getProperty("Password");
 	  driver.get(URL);
 	  LoginPage lp=new LoginPage(driver);
 	  lp.loginToApp(USERNAME, PASSWORD);
